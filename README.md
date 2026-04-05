@@ -277,3 +277,20 @@ git pull origin main
 4. Verification: Checked that the repository links in `CITATION.cff` and `zensical.toml` point to `Angie-Crews/nlp-05-web-documents`, confirmed the added author appears in the citation metadata, and confirmed the license includes the 2026 copyright line for Angie Crews.
 
 ## Phase 3. **Read & Understand**
+
+1. Select an interesting part of the example code (`3-10 lines)
+  ![Phase 3 Code Chosen](site/assets/images/phase_3_code_chosen.png)
+2. Why did you choose this part? It shows how data is pulled from a website, checked for errors, and saved in a way that can be reused in a larger workflow.
+3. As an analyst, what could you do with these skills? Automatically collect data, make sure it’s accurate, and build repeatable processes for reports, dashboards, or analysis.
+
+
+### Key Insights from the Data
+
+The processed data reveals several important findings:
+
+- **Large, Diverse Collaboration:** The case study features 38 authors, indicating a highly collaborative research effort.
+- **Focus on AI Agent Vulnerabilities:** The main subject is the security, privacy, and governance risks of autonomous language-model-powered agents in real-world settings.
+- **Empirical Evidence of Risks:** The study documents concrete examples of agent failures, including unauthorized compliance, information disclosure, destructive actions, denial-of-service, identity spoofing, and system takeover.
+- **Urgency for Policy and Research:** The findings highlight unresolved questions about accountability and responsibility, emphasizing the need for urgent attention from legal, policy, and research communities.
+
+These insights underscore the importance of robust validation and monitoring when deploying autonomous agents, and the value of structured pipelines for extracting actionable knowledge from complex web data.
