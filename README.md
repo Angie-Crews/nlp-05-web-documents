@@ -294,3 +294,17 @@ The processed data reveals several important findings:
 - **Urgency for Policy and Research:** The findings highlight unresolved questions about accountability and responsibility, emphasizing the need for urgent attention from legal, policy, and research communities.
 
 These insights underscore the importance of robust validation and monitoring when deploying autonomous agents, and the value of structured pipelines for extracting actionable knowledge from complex web data.
+
+## Phase 4. **Make a Technical Modification**
+
+1. What specifically did you modify:
+  Created a Phase 4 version of the pipeline named `crews_p4` and updated the transform stage to extract two additional fields from the arXiv page: a direct PDF URL and the paper's primary subject code. These values are written to the output as `crews_p4_pdf_url` and `crews_p4_primary_subject_code`.
+
+2. Why did you choose this:
+  The PDF URL makes it possible to automate access to the full paper, and the primary subject code makes it easier to classify, filter, and organize research articles by topic.
+
+3. What did you observe:
+  When first changes were implemented, both new fields returned `unknown`. After inspecting the raw HTML, it was found that the PDF URL was stored in a `meta` tag named `citation_pdf_url`, and the subject code appeared inside a `span` with class `primary-subject`. After updating the selectors to match the actual page structure, the pipeline ran successfully and both new fields were populated correctly.
+
+4. What insights did you gain:
+  Web extraction depends heavily on the actual HTML structure, not assumptions about what the page should look like. Even when a page visually shows the information, the data may be stored in different tags than expected. I also saw the value of using the raw HTML file as evidence when debugging extraction logic.
