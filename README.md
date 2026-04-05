@@ -262,16 +262,6 @@ The following artifacts will be created:
 - data/raw/case_raw.json - dump of the fetched JSON
 - data/processed/case_processed.csv - final loaded result
 
-## Command Reference
-
-The commands below are used in the workflow guide above.
-They are provided here for convenience.
-
-Follow the guide for the **full instructions**.
-
-<details>
-<summary>Show command reference</summary>
-
 
 ## Phase 2. **Change Authorship**
 
