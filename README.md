@@ -308,3 +308,17 @@ These insights underscore the importance of robust validation and monitoring whe
 
 4. What insights did you gain:
   Web extraction depends heavily on the actual HTML structure, not assumptions about what the page should look like. Even when a page visually shows the information, the data may be stored in different tags than expected. I also saw the value of using the raw HTML file as evidence when debugging extraction logic.
+
+## Phase 5. **Apply the Skills to a New Problem**
+
+1. Describe your custom application (how did you change the text, the code):
+   Created a new version of the pipeline called `crews_p5` and updated the source to use a differenct arXiv paper `Attention Is All You Need` at `https://arxiv.org/abs/1706.03762`. I kept the EVTL structure the same, reused the same code, just pointing it to a new page. The Phase 5 output is written to `data/processed/crews_p5_processed.csv`.
+
+2. What is interesting about your custom application:
+   This is interesting because it shows the pipeline can be reused on a different paper without starting over. It also uses a well-known paper that introduced the Transformer model used in modern NLP.
+
+3. What insights did you gain:
+   If the pipeline is set up well, you only need small changes to reuse it on similar data. Keeping each step separate also made it easier to test and update without breaking earlier work.
+
+4. Briefly summarize your results:
+   The Phase 5 pipeline ran successfully on the new paper and extracted a clean structured record. The results show arXiv ID `1706.03762`, the title `Attention Is All You Need`, 8 authors, the primary subject `cs.CL`, a working PDF URL, and an abstract word count of 166. This confirmed that the pipeline pattern could be reused successfully on a new arXiv problem.
