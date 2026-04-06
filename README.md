@@ -322,3 +322,28 @@ These insights underscore the importance of robust validation and monitoring whe
 
 4. Briefly summarize your results:
    The Phase 5 pipeline ran successfully on the new paper and extracted a clean structured record. The results show arXiv ID `1706.03762`, the title `Attention Is All You Need`, 8 authors, the primary subject `cs.CL`, a working PDF URL, and an abstract word count of 166. This confirmed that the pipeline pattern could be reused successfully on a new arXiv problem.
+
+## Identifying Correct HTML Tags
+
+When working with web scraping pipelines, identifying the correct HTML tags and attributes is crucial for accurate data extraction. Here's how we approached this task:
+
+1. **Inspecting the HTML Structure**:
+   - We used browser developer tools (e.g., Chrome DevTools) to inspect the raw HTML of the target web pages.
+   - By right-clicking on the desired element (e.g., PDF URL, primary subject code) and selecting "Inspect," we located the corresponding HTML tags and attributes.
+
+2. **Analyzing Patterns**:
+   - We examined multiple instances of the target elements to identify consistent patterns in their structure.
+   - For example, the PDF URL was consistently found within `<a>` tags with a specific `href` attribute, while the primary subject code was located in `<span>` tags with a unique class.
+
+3. **Testing Selectors**:
+   - We iteratively tested CSS selectors and XPath expressions in the browser console to ensure they returned the correct elements.
+   - For example:
+     ```javascript
+     document.querySelector('a[href*="pdf"]');
+     document.querySelector('span.subject-code');
+     ```
+
+4. **Validating Extraction Logic**:
+   - After implementing the selectors in the pipeline, we validated the extracted data against the actual web page content to ensure accuracy.
+
+This process ensured that the pipeline could reliably extract the required fields, even if the HTML structure varied slightly between pages.
